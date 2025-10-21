@@ -13,8 +13,8 @@ def bananabid(my_player_number: int, my_bananas: int, monkey_position: int, oppo
     else:
         lastBid=past_bid_list[turn_number-2][2-my_player_number]
         if lastBid>26 and lastBid<58:
-            return lastBid+randint(2,12)
+            return min(my_bananas,lastBid+randint(2,12))
         elif lastBid<=26:
-            return 2*lastBid+randint(1,6)
+            return min(my_bananas,2*lastBid+randint(1,6))
         elif lastBid>=58:
-            return lastBid/2+randint(2,12)
+            return min(my_bananas,lastBid/2+randint(2,12))
