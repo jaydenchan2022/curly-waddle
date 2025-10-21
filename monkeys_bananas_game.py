@@ -18,7 +18,3 @@ def bananabid(my_player_number: int, my_bananas: int, monkey_position: int, oppo
             return 2*lastBid+randint(1,6)
         elif lastBid>=58:
             return lastBid/2+randint(2,12)
-
-
-def testFunction(playerNumber,ownBananas,monkeyPosition,bidList,turnNumber):
-    print(bananabid(playerNumber,ownBananas,monkeyPosition,200,bidList,turnNumber))
